@@ -3,6 +3,9 @@ class Post < ApplicationRecord
   has_many :likes
   has_many :comments
 
+validate :title, presence: true, length: { minimum: 250 }
+
+
   def update_post_counter
     user.update(posts_counter: user.posts.count)
   end
