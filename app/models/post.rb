@@ -3,9 +3,11 @@ class Post < ApplicationRecord
   has_many :likes
   has_many :comments
 
-validate :title, presence: true, length: { minimum: 250 }
-validate :comments_counter, numericallity: { only_integer: true,  greater_than_or_equal_to: 0 }
-validate :likes_counter, numericallity: { only_integer: true,  greater_than_or_equal_to: 0 }
+validates :title, presence: true, length: { maximum: 250 }
+
+validates :comments_counter, presence: true, numericality: { only_integer: true,  greater_than_or_equal_to: 0 }
+
+validates :likes_counter, presence: true, numericality: { only_integer: true,  greater_than_or_equal_to: 0 }
 
 
   def update_post_counter
