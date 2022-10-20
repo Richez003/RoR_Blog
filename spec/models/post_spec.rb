@@ -12,7 +12,7 @@ RSpec.describe Post, type: :model do
     expect(subject).to_not be_valid
   end
 
-    it 'Should be valid' do
+  it 'Should be valid' do
     expect(subject).to be_valid
   end
 
@@ -21,12 +21,11 @@ RSpec.describe Post, type: :model do
     expect(subject).to_not be_valid
   end
 
-    it 'likes_counter should be a greter than or equal to 0' do
+  it 'likes_counter should be a greter than or equal to 0' do
     expect(subject.likes_counter).to be >= 0
   end
 
-      it 'comments_counter should be a greter than or equal to 0' do
+  it 'comments_counter should be a greter than or equal to 0' do
     expect(subject.comments_counter).to be >= 0
   end
-
- end
+end
