@@ -1,12 +1,12 @@
-<h3>User's List:</h3>
+<h3>User's List</h3>
 <% @users.each do |user| %>
 <section class = "user">
-    <div>
-        <%= image_tag user.photo %>
+    <div class = "photo">
+        <%= image_tag('user.jpg', class: "userPix")  %>
     </div>
     <div class = "details">
         <h2><%= user.name %></h2>
-        <p>
+        <p class = "PostCount" >
             Number of posts: <%= user.posts_counter %>
         </p>
     </div>
