@@ -1,0 +1,28 @@
+
+<% @movies.each do |movie| %>
+<section class="movies">
+<div class="image">
+<%= image_tag movie.image_file_name %>
+</div>
+   <div class="sumary">
+     <h2><%= link_to movie.name, movie %><h2>
+     <h3><%=  date_and_time(movie) %>
+     </h3>
+     <span>
+      sold at: <%= price(movie) %>
+     </span>
+     <p>
+     <%= movie.description %>
+     </p>
+     </div>
+</section>
+<% end %>
+
+  <% if current_user_admin? %>
+<div class="admin">
+<%= link_to "Add New Movie", new_movie_path, class: "button" %>
+</div>
+
+<% end %>
+
+
