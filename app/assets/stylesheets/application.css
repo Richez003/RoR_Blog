@@ -94,10 +94,11 @@
   height: 80%;
 }
 
-.postdetail{
+.postdetail {
   justify-content: flex-end;
   text-align: end;
 }
+
 .Postcomment {
   border: 2px solid #000;
   text-align: center;
