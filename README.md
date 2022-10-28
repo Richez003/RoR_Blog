@@ -7,10 +7,10 @@ The Blog app is a classic example of a blog website. I created a fully functiona
 ## Getting Started
 To get a local copy up and running follow these simple example steps.
 
-- Copy this link `https://github.com/Richez003/Blog_App`.
+- Copy this link `https://github.com/Richez003/RoR_Blog`.
 - Get the directory that you want to clone the repository.
 - Open the command prompt in this directory.
-- Write `https://github.com/Richez003/Blog_App`.
+- Write `https://github.com/Richez003/RoR_Blog`.
 - Go to the repository folder in your command prompt `cd blog-app`.
 
 - Follow these steps to run the app:
@@ -28,7 +28,7 @@ To get a local copy up and running follow these simple example steps.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Richez003/Blog_App/issues).
+Feel free to check the [issues page](https://github.com/Richez003/RoR_Blog/issues).
 
 ## Show your support
 
