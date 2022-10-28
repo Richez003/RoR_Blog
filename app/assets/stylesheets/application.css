@@ -20,7 +20,6 @@
  } */
 
 .user {
-  justify-content: flex-start;
   align-items: center;
   gap: 20px;
   justify-content: center;
@@ -51,9 +50,9 @@
   height: 70%;
   padding: 30px;
   text-align: center;
-margin: auto;
-justify-content: center;
-justify-items: center;
+  margin: auto;
+  justify-content: center;
+  justify-items: center;
   border: 2px solid #000;
 }
 
@@ -64,11 +63,11 @@ justify-items: center;
   text-align: center;
   margin: auto;
   border: 2px solid #000;
-
 }
+
 .usercomments span {
-text-align: center;
-display: block;
+  text-align: start;
+  display: block;
 }
 
 .Postcomments {
@@ -77,23 +76,28 @@ display: block;
   border: 2px solid #000;
 }
 
-.userPost {
+/* .userPost {
   border: 2px solid #000;
   text-align: center;
   width: 93%;
   height: 80%;
   margin: auto;
-}
+} */
 
 .userPost {
   border: 2px solid #000;
   text-align: center;
   width: 93%;
-  margin-top:10px ;
+  margin: auto;
+  margin-top: 10px;
   padding: 10px;
   height: 80%;
 }
 
+.postdetail{
+  justify-content: flex-end;
+  text-align: end;
+}
 .Postcomment {
   border: 2px solid #000;
   text-align: center;
@@ -113,9 +117,7 @@ display: block;
 .page {
   display: flex;
   justify-content: space-between;
-
 }
-
 
 .userPost p {
   text-align: start;
@@ -132,23 +134,18 @@ display: block;
 }
 
 .commentCounter {
-justify-items: end;
-justify-self: flex-end;
-text-align: end;
-margin: auto;
-padding-left: 53rem;
+  justify-items: end;
+  justify-self: flex-end;
+  text-align: end;
+  margin: auto;
+  padding-left: 53rem;
 }
 
 .postcommentCounter {
   margin: auto;
   padding-left: 52rem;
-  }
+}
 
-  .postsCounter {
-    margin-top: 0;
-    padding-left: 52rem;
-
-  }
 .userBio p {
   text-align: start;
 }
