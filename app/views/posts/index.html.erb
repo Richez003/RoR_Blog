@@ -12,20 +12,9 @@
     </div>
 </div>
 
-    <div class = "Postcomment" >
-        <p>Post #1</p>
-        <%= @posts.text %>
-         <p class = "postcommentCounter" >
-            Comments: <%= @posts.comments_counter %>
-            Likes:<%= @user.likes.size %>
-        </p>
-    </div>
-
-<div class = "usercomments" >
-       <% @posts.five_recent_comments.each do |comment| %>
-      <span><%= comment.user.name %>: <%= comment.text %></span>
-    <%end%>
-</div>
+<%= @posts.each do |post| %>
+<%= render post%>
+<% end %>
 </section>
 
 

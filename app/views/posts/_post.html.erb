@@ -1,0 +1,15 @@
+    <div class = "Postcomment" >
+
+        <p><%= post.title%></p>
+        <%= post.text %>
+         <p class = "postcommentCounter" >
+            Comments: <%= post.comments_counter %>
+            Likes:<%= post.likes_counter %>
+        </p>
+    </div>
+
+<div class = "usercomments" >
+       <% post.five_recent_comments.each do |comment| %>
+      <span><%= comment.user.name %>: <%= comment.text %></span>
+    <%end%>
+</div>

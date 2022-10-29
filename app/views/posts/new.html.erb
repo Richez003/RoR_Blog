@@ -1,5 +1,5 @@
-<%= form_with model: @post do |f| %>
-
+<%# <%= form_with(model: @post, local: true) do |f| %>
+<%= form_with url: user_posts_path, scope: :post do |f| %>
   <%= f.label :title, "Title:" %></br >
   <%= f.text_field :title, placeholder: "Article title" %>
   <%= f.label :text, "Article Description" %></br >
