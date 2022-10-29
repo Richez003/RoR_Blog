@@ -4,14 +4,12 @@
         <p>Post #1 by<%= @user.name %></p>
          <p class = "postsCounter" >
             Comments: <%= @posts.comments_counter %>
-            Likes:<%= @user.likes.size %>
+          <%= button_to "* Like", user_post_likes_path(:user_id, :post_id), method: :post %>:<%= @posts.likes.count %>
         </p>
 
         </div>
         <%= @posts.text %>
-
     </div>
-
 <div class = "usercomments" >
        <% @posts.five_recent_comments.each do |comment| %>
       <span><%= comment.user.name %>: <%= comment.text %></span>

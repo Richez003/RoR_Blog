@@ -4,11 +4,12 @@ Rails.application.routes.draw do
   # get 'posts/index'
   # get 'posts/show'
   root 'users#index'
-
+  get 'likes/create'
   resources :users do
-  resources :posts
-  resources :likes
+  resources :posts do
+  resources :likes, only: [:create, :destroy]
   end
+end
 
   # get 'users/show'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
