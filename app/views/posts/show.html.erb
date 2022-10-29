@@ -4,7 +4,7 @@
         <p>Post #1 by<%= @user.name %></p>
          <p class = "postsCounter" >
             Comments: <%= @posts.comments_counter %>
-          <%= button_to "* Like", user_post_likes_path(:user_id, :post_id), method: :post %>:<%= @posts.likes.count %>
+          <%= button_to "* Like",user_posts_path(:user_id, :post_id), method: :post %>:<%= @posts.likes.count %>
         </p>
 
         </div>
