@@ -1,1 +1,31 @@
-<h1>Here is a list of posts for a given user</h1>
+<h3>User's Posts</h3>
+<section>
+<div class = "userProfile">
+    <div class = "photo">
+        <%= image_tag('user.jpg', class: "userPix")  %>
+    </div>
+    <div class = "details">
+        <h2><%= @user.name %></h2>
+        <p class = "PostCount" >
+            Number of posts: <%= @user.posts_counter %>
+        </p>
+    </div>
+</div>
+
+    <div class = "Postcomment" >
+        <p>Post #1</p>
+        <%= @posts.text %>
+         <p class = "postcommentCounter" >
+            Comments: <%= @posts.comments_counter %>
+            Likes:<%= @user.likes.size %>
+        </p>
+    </div>
+
+<div class = "usercomments" >
+       <% @posts.five_recent_comments.each do |comment| %>
+      <span><%= comment.user.name %>: <%= comment.text %></span>
+    <%end%>
+</div>
+</section>
+
+

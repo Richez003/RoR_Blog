@@ -1,16 +1,19 @@
-<h3>Users List</h3>
-<%# <% @users.each do |user| %>
-<%# <section class = "user">
-    <div class = "photo"> %>
-        <%# <%= image_tag('user.jpg', class: "userPix")  %>
-    <%# </div>
+<h3>User's List</h3>
+<% @users.each do |user| %>
+<section class = "user">
+    <div class = "photo">
+        <%= image_tag('user.jpg', class: "userPix")  %>
+    </div>
     <div class = "details">
-        <h2><%= user.name %>
-        <%# <p class = "PostCount" >
+        <h2><%= user.name %></h2>
+        <p class = "PostCount" >
             Number of posts: <%= user.posts_counter %>
-        <%# </p> %>
-    <%# </div> %>
-<%# </section> %>
-    <%# <% end %>
+        </p>
 
+    </div>
+</section>
+    <% end %>
+<div class = "btn" >
+    <%= button_to "Pagination" %>
+</div>
 
