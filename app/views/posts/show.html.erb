@@ -4,7 +4,7 @@
         <p>Post by<%= @user.name %></p>
          <p class = "postsCounter" >
             Comments: <%= @post.comments_counter %> 💬
-          <%= button_to 'Like', user_post_likes_path(@post.user, @post) %>:<%= @post.likes.count %> ❤️
+          <%= button_to 'Like', user_post_likes_path(@post.user, @post), class: "like_btn" %>:<%= @post.likes.count %> ❤️
 
         </p>
 
