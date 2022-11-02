@@ -1,22 +1,26 @@
 </section>
     <div class = "Postpage" >
         <div  class = "page">
-        <p>Post #1 by<%= @user.name %></p>
+        <p>Post by<%= @user.name %></p>
          <p class = "postsCounter" >
-            Comments: <%= @posts.comments_counter %>
-            Likes:<%= @user.likes.size %>
+            Comments: <%= @post.comments_counter %> 💬
+          <%= button_to 'Like', user_post_likes_path(@post.user, @post), class: "like_btn" %>:<%= @post.likes.count %> ❤️
+
         </p>
 
         </div>
-        <%= @posts.text %>
-
+        <%= @post.text %>
     </div>
-
+    <div>
+    <% if @post.five_recent_comments.any? %>
 <div class = "usercomments" >
-       <% @posts.five_recent_comments.each do |comment| %>
+       <% @post.five_recent_comments.each do |comment| %>
       <span><%= comment.user.name %>: <%= comment.text %></span>
     <%end%>
 </div>
+<% end %>
+    </div>
+
 </section>
 
 

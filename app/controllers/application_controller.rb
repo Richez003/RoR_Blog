@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  def three_recent_posts
-    posts.order(created_at: :desc).limit(3)
+  def current_user
+    User.find(params[:user_id])
   end
 end
