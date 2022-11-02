@@ -8,6 +8,8 @@
         <h2><%= @user.name %></h2>
         <p class = "PostCount" >
             Number of posts: <%= @user.posts_counter %>
+                <% if @user.posts_counter.nil?%><%= "0" %>
+                <%end%>
         </p>
     </div>
 </div>
@@ -19,7 +21,7 @@
     <div>
     <% @user.three_recent_post.each do |user| %>
       <div  class = "userPost">
-        <p>Post #1</p>
+        <p> <%= user.title %> </p>
         <%= user.text%>
         <div class = "postdetail">
        comments: <%= user.comments_counter %>: |likes:<%= user.likes.size %></div>
@@ -29,7 +31,7 @@
     </div>
 </section>
 <div class = "btn" >
-    <%= button_to "See All Post", user_posts_url(@user), class: "btn" %>
+    <%= link_to "See All Post", user_posts_url(@user), class: "btn" %>
 </div>
 
 

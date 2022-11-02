@@ -1,14 +1,16 @@
     <div class = "Postcomment" >
 
-        <p><%= post.title%></p>
+        <p><%= link_to post.title,  user_post_path(@user.id, post.id) %></p>
         <%= post.text %>
          <p class = "postcommentCounter" >
-            Comments: <%= post.comments_counter %>
+               Likes: <%= post.likes.count %> ❤️, Comments: <%= post.comments.count %> 💬
         </p>
     </div>
 
+    <% if post.five_recent_comments.any? %>
 <div class = "usercomments" >
        <% post.five_recent_comments.each do |comment| %>
       <span><%= comment.user.name %>: <%= comment.text %></span>
     <%end%>
 </div>
+<% end %>

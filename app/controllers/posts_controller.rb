@@ -9,7 +9,8 @@ class PostsController < ApplicationController
 
   def show
     @user = User.find(params[:user_id])
-    @posts = @user.posts.find(params[:user_id])
+    @post = @user.posts.find(params[:id])
+
   end
 
   def new
@@ -17,17 +18,21 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(posts_params)
+    @user = current_user
+    @post = @user.posts.new(post_params)
+    @post.likes_counter = 0
+    @post.comments_counter = 0
     if @post.save
-      redirect_to user_post_path(id: @post.id, user_id: @post.user_id), notice: 'Post created succesfully!'
+      redirect_to user_posts_path(@user.id)
     else
-      render :new, alert: 'Post could not be created an Error occurred!'
+      render :new
     end
   end
+end
 
   private
 
-  def posts_params
+  def post_params
     params.require(:post).permit(:text, :title, :user_id)
   end
-end
+
