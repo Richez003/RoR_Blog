@@ -10,7 +10,6 @@ class PostsController < ApplicationController
   def show
     @user = User.find(params[:user_id])
     @post = @user.posts.find(params[:id])
-
   end
 
   def new
@@ -32,7 +31,6 @@ end
 
   private
 
-  def post_params
-    params.require(:post).permit(:text, :title, :user_id)
-  end
-
+def post_params
+  params.require(:post).permit(:text, :title, :user_id)
+end

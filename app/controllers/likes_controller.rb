@@ -4,6 +4,6 @@ class LikesController < ApplicationController
     @like = @post.likes.new
     @like.user_id = current_user.id
     @like.save
-    redirect_to  user_posts_path(:user_id, @post.id)
+    redirect_to user_posts_path(:user_id, @post.id)
   end
 end
