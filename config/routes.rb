@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  # get 'posts/index'
-  # get 'posts/show'
   root 'users#index'
   resources :users do
   resources :posts  do
