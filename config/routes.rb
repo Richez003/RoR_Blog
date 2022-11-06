@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   # get 'posts/index'
   # get 'posts/show'
   root 'users#index'
-  get 'likes/create'
   resources :users do
   resources :posts  do
   resources :likes, only: [:create, :destroy]
