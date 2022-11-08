@@ -4,7 +4,7 @@ RSpec.describe 'User show', type: :system do
   before :each do
     @user = User.create(name: 'Tim', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Coach')
     @post = Post.create(user: @user, title: 'Test', text: 'This is a test post')
-     Comment.create(user: @user, post: @post, text: 'Test Comment')
+    Comment.create(user: @user, post: @post, text: 'Test Comment')
     visit user_path(@user.id)
   end
 
