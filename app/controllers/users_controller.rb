@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   def index
+    # fail
     @users = User.all
   end
 

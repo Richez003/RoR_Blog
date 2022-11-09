@@ -24,6 +24,13 @@ To get a local copy up and running follow these simple example steps.
 - Twitter: [@richardfriday14](https://twitter.com/richardfriday14)
 - LinkedIn: [@LinkedIn](https://www.linkedin.com/in/richard-friday-54980718a)
 
+
+👤 **Tuyishimire Eric**
+
+- GitHub: [@TuyishimireEric](https://github.com/TuyishimireEric)
+- LinkedIn: [@TuyishimireEric](https://www.linkedin.com/in/TuyishimireEric/)
+- E-mail: <a href="mailto:tuyishimireericc@gmail.com">tuyishimireericc@gmail.com</a>
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
