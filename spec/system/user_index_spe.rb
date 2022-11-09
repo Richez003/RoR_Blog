@@ -10,9 +10,9 @@ RSpec.describe 'User show', type: :system do
   #   expect(page).to have_content(@user.name)
   # end
 
-  # it 'shows profile picture of every user' do
-  #   expect(page).to have_content(@user.photo)
-  # end
+  it 'shows profile picture of every user' do
+    expect(page).to have_content(@user.photo)
+  end
 
   # it 'shows number of posts of user' do
   #   expect(page).to have_content('Number of posts: 0')

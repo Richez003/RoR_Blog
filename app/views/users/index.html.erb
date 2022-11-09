@@ -2,7 +2,8 @@
 <% @users.each do |user| %>
 <section class = "user">
     <div class = "photo">
-        <%= image_tag('user.jpg', class: "userPix")  %>
+        <%=
+        image_tag('user.jpg', class: "userPix")  %>
     </div>
     <div class = "details">
         <h2><%= user.name %></h2>
